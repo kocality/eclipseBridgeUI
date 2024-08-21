@@ -1,0 +1,19 @@
+{
+  "name": "eclipsebridge",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "live-server public",
+    "build": "parcel build public/index.html --dist-dir dist --public-url ./"
+  },
+  "author": "kocality",
+  "license": "ISC",
+  "dependencies": {
+    "ethers": "^6.13.2"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "parcel": "^2.0.0"
+  },
+  "keywords": [],
+  "description": ""
+}
