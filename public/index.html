@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclipse Bridge</title>
+    <link rel="icon" href="assets/kocality.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <script src="main.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <div class="left-images">
+            <img src="assets/kocality.png" alt="Kocality" class="large-image">
+            <img src="assets/turbo.png" alt="Turbo" class="large-image">
+        </div>
+        <div class="right">
+            <div id="balance-info" class="hidden">Balance: 0.0108 ETH</div>
+            <button id="connect-button">
+                <img src="assets/metamask.svg" alt="Metamask">
+                Connect Wallet
+            </button>
+            <div id="wallet-info" style="display: none;">
+                <img src="assets/metamask.svg" alt="MetaMask" />
+                <span id="wallet-address"></span>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Eclipse Mainnet Bridge</h2>
+        <div class="exchange-box">
+            <div class="box">
+                <img id="chain-logo" src="assets/ethereum.svg" alt="Ethereum" class="ethereum-logo">
+                <div>
+                    <div class="label">From</div>
+                    <select id="from-chain" style="width: 200px;">
+                        <option value="ethereum">Ethereum</option>
+                    </select>
+                </div>
+            </div>
+            <div class="box">
+                <img src="assets/eclipse-logo.svg" alt="Eclipse" class="eclipse-logo">
+                <div>
+                    <div class="label">To</div>
+                    <input id="to-chain" type="text" value="Eclipse Mainnet Beta" disabled>
+                </div>
+            </div>
+            <div class="box full-width">
+                <div class="label">Eclipse Wallet Address</div>
+                <input id="eclipse-wallet" type="text" placeholder="" maxlength="44">
+            </div>
+        </div>             
+        <div class="amount-box">
+            <div class="label">Amount (ETH)</div>
+            <input id="ether-amount" type="number" placeholder="" step="0.01" min="0">
+        </div>
+        <div class="button-box">
+            <button id="bridge-button" class="bridge-button" disabled>Bridge</button>
+        </div>
+        <div class="note">
+            Reminder: Eclipse is in "Mainnet Beta" phase, and bridge withdrawals are currently disabled.
+        </div>
+    </div>
+    <footer>
+        <div class="footer-text">
+            This bridge made with love by <a href="https://kocality.com" target="_blank">kocality</a> <3
+        </div>
+        <div class="footer-icons">
+            <a href="https://x.com/kkocality" target="_blank">
+                <img src="assets/x.svg" alt="X">
+            </a>
+            <a href="https://t.me/kocality" target="_blank">
+                <img src="assets/telegram.svg" alt="Telegram">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
